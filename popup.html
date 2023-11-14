@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non custodial wallet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card2">
+        <!-- HEADER -->
+        <div class="header">
+          <div class="header_log">
+            <img src="./assets/theblockchaincoders.svg" alt="logo" />
+          </div>
+
+          <div class="header_network" id="header_network">
+            <p><img src="./assets/SVG/question.svg" alt="question" /><span id="selected_network">Polygon Mumbai</span><img src="./assets/SVG/arrow.svg" /></p>
+            <div class="error" id="error"></div>
+          </div>
+        </div>
+        <!-- END OF HEADER -->
+
+        <!-- NETWORK SECTION -->
+        <div id="network" class="network">
+          <div class="network_title">
+            <p>Networks</p>
+          </div>
+          <div id="network_item" class="network_list">
+            <p class="network_item">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <span>Ethereum Mainnet</span>
+            </p>
+            <p class="network_item">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <span>Polygon Mainnet</span>
+            </p>
+            <p class="network_item">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <span>Polygon Mumbai</span>
+            </p>
+            <p class="network_item">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <span>Goerli test network</span>
+            </p>
+            <p class="network_item">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <span>Sepolia test network</span>
+            </p>
+          </div>
+
+          <button id="add_network" class="button3 addStyle">Add network</button>
+        </div>
+        <!-- END OF NETWORK SECTION -->
+
+        <!-- HOME SCREEN -->
+        <div id="createAccount" class="home_screen_signup">
+          <img src="./assets/theblockchaincoders.svg" alt="" class="home_screen_img" />
+          <h1 class="home_title">Mi Wallet</h1>
+          <p>Welcome to next generation crypto wallet exchange, the most complete dapp solution</p>
+          <button id="openCreate" class="button3 connectWallet">Create Account</button>
+          <p>Login to your account <strong class="home_title" id="loginAccount">LOGIN</strong></p>
+        </div>
+        <!-- END OF HOME SCREEN -->
+
+        <!-- CREATE POP UP -->
+        <div id="create_popUp" class="create_popUp">
+          <div class="form">
+            <p id="heading">Create Account</p>
+            <div id="field">
+              <div class="field">
+                <img src="./assets/SVG/lock.svg" alt="lock" />
+                <input type="text" class="input-field" placeholder="name" id="sign_up_name" />
+              </div>
+              <p class="space"></p>
+              <div class="field">
+                <img src="./assets/SVG/@.svg" alt="lock" />
+                <input type="text" class="input-field" placeholder="email" id="sign_up_email" />
+              </div>
+              <p class="space"></p>
+              <div class="field">
+                <img src="./assets/SVG/lock.svg" alt="lock" />
+                <input type="text" class="input-field" placeholder="password" id="sign_up_password" />
+              </div>
+              <p class="space"></p>
+              <div class="field">
+                <img src="./assets/SVG/lock.svg" alt="lock" />
+                <input type="text" class="input-field" placeholder="password confirm" id="sign_up_passwordConfirm" />
+              </div>
+            </div>
+
+            <div id="center" class="center">
+              <div class="loader">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div class="bar4"></div>
+                <div class="bar5"></div>
+                <div class="bar6"></div>
+                <div class="bar7"></div>
+                <div class="bar8"></div>
+                <div class="bar9"></div>
+                <div class="bar10"></div>
+                <div class="bar11"></div>
+                <div class="bar12"></div>
+              </div>
+            </div>
+
+            <div id="accountData" class="accountData">
+              <h3 id="accountInfo">Address</h3>
+              <p id="createdAddress">Address:</p>
+              <h3>Private Key</h3>
+              <p id="createdPrivateKey">Private Key:</p>
+              <h3>Mnemonic</h3>
+              <p id="createdMnemonic">Mnemonic:</p>
+            </div>
+
+            <button id="sign_up" class="button3 connectWallet">Sign Up</button>
+            <button id="goHomePage" class="button3 connectWallet">Go Back</button>
+          </div>
+        </div>
+        <!-- END OF CREATE POP UP -->
+
+        <!-- LOGIN COMPONENTS -->
+        <div id="LoginUser" class="home_screen_login">
+          <img src="./assets/theblockchaincoders.svg" alt="logo" class="home_screen_img" />
+          <h1 class="home_title">Mi Wallet</h1>
+          <p>Welcome back! The decentralized web Dapp</p>
+          <div class="form" id="login_form">
+            <div class="field">
+              <img src="./assets/SVG/@.svg" />
+              <input type="text" id="login_email" class="input-field" placeholder="email" />
+            </div>
+            <div class="field">
+              <img src="./assets/SVG/lock.svg" />
+              <input type="text" id="login_password" class="input-field" placeholder="password" />
+            </div>
+          </div>
+          <button id="login" class="button3 connectWallet">Login</button>
+          <p>Login to your account <strong class="home_title" id="accountCreate">Create Account</strong></p>
+        </div>
+        <!-- END OF LOGIN COMPONENTS -->
+
+        <!-- TRANSFER COMPONENT -->
+        <div class="transfer_form" id="transfer_form">
+          <div class="form">
+            <img src="./assets/arrowleft.png" class="goBack" id="goBack" alt="go back to home" />
+
+            <p id="heading">Transfer Funds</p>
+            <div class="field">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <input type="text" class="input-field" placeholder="amount" id="amount" />
+            </div>
+            <p class="space"></p>
+            <div class="field">
+              <img src="./assets/SVG/@.svg" alt="lock" />
+              <input type="text" class="input-field" placeholder="Transfer Address" id="address" />
+            </div>
+
+            <div id="transfer_center" class="center">
+              <div class="loader">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div class="bar4"></div>
+                <div class="bar5"></div>
+                <div class="bar6"></div>
+                <div class="bar7"></div>
+                <div class="bar8"></div>
+                <div class="bar9"></div>
+                <div class="bar10"></div>
+                <div class="bar11"></div>
+                <div class="bar12"></div>
+              </div>
+            </div>
+
+            <small>
+              <a href="" id="link" target="_blank">Check your Transaction</a>
+            </small>
+
+            <button id="transferFund" class="button3 connectWallet">Transfer</button>
+          </div>
+        </div>
+        <!-- END OF TRANSFER COMPONENT -->
+
+        <!-- IMPORT COMPONENT -->
+        <div id="import_token" class="import_token">
+          <div class="form">
+            <img src="./assets/arrowleft.png" alt="go back" class="goBack" id="goBack_import" />
+
+            <p id="heading">Import Token</p>
+            <div class="field">
+              <img src="./assets/SVG/@.svg" alt="@" />
+              <input type="text" class="input-field" placeholder="token address" id="token_address" />
+            </div>
+            <p class="space"></p>
+            <div class="field">
+              <img src="./assets/SVG/@.svg" alt="@" />
+              <input type="text" class="input-field" placeholder="token name" id="token_name" />
+            </div>
+            <p class="space"></p>
+            <div class="field">
+              <img src="./assets/SVG/@.svg" alt="@" />
+              <input type="text" class="input-field" placeholder="token symbol" id="token_symbol" />
+            </div>
+            <button id="add_new_token" class="button3 connectWallet">Import</button>
+            <!-- <div class="accountList" id="accountList"></div> -->
+          </div>
+        </div>
+        <!-- END OF IMPORT COMPONENT -->
+
+        <!-- IMPORT ACCOUNT -->
+        <div id="import_account" class="import_account">
+          <div class="form">
+            <img id="close_import_account" class="goBack" src="./assets/arrowleft.png" alt="go back" />
+            <p id="heading">Import Account</p>
+            <div class="field">
+              <img src="./assets/SVG/lock.svg" alt="lock" />
+              <textarea type="text" class="input-field" placeholder="private key" id="add_account_private_key" name="" cols="30" rows="5"></textarea>
+            </div>
+
+            <button id="add_New_Account" class="button3 connectWallet">Import</button>
+            <div id="load_account"></div>
+            <div class="accountList" id="accountList"></div>
+          </div>
+        </div>
+        <!-- END IMPORT ACCOUNT -->
+
+        <!-- MAIN BODY -->
+        <div class="home" id="home">
+          <div class="home_header">
+            <div>
+              <p id="userAddress">connecting...</p>
+            </div>
+            <div>
+              <p>Active</p>
+            </div>
+          </div>
+
+          <img src="./assets/theblockchaincoders.svg" class="home_header_img" alt="" />
+          <h1 id="accountBlance">0.00 MATIC</h1>
+
+          <div class="home_features">
+            <div class="home_feature_item">
+              <img src="./assets/buy.png" class="home_features_img" alt="" />
+              <p class="text">Buy</p>
+            </div>
+            <div class="home_feature_item" id="open_Transfer">
+              <img src="./assets/send.png" class="home_features_img" alt="" />
+              <p class="text">Send</p>
+            </div>
+            <div class="home_feature_item" id="openAccountImport">
+              <img src="./assets/user.png" class="home_features_img" alt="" />
+              <p class="text">Account</p>
+            </div>
+            <div class="home_feature_item" id="open_Import">
+              <img src="./assets/import.png " class="home_features_img" alt="" />
+              <p class="text">Import</p>
+            </div>
+          </div>
+
+          <div class="home_tabs">
+            <p id="open_assets">Assets</p>
+            <p id="logout">logout</p>
+            <p id="open_activity">Activity</p>
+          </div>
+          <p class="space"></p>
+          <p class="space"></p>
+
+          <!-- ASSETS -->
+          <div id="assets" class="assets"></div>
+          <!-- END OF ASSETS -->
+
+          <!-- ACTIVITY -->
+          <div id="activity" class="activity">
+            <div class="assets_item">
+              <img src="./assets/theblockchaincoders.svg" class="assets_item_img" alt="" />
+              <span>24432445445424...</span>
+              <span>0.45 MATIC</span>
+            </div>
+          </div>
+          <div id="activity" class="activity">
+            <div class="assets_item">
+              <img src="./assets/theblockchaincoders.svg" class="assets_item_img" alt="" />
+              <span>24432445445424...</span>
+              <span>0.45 MATIC</span>
+            </div>
+          </div>
+          <!-- END OF ACTIVITY -->
+        </div>
+        <!-- END OF MAIN BODY -->
+      </div>
+    </div>
+    <script src="https://cdn.ethers.io./lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <!-- <script src="ethers.js"></script> -->
+    <script src="popup.js"></script>
+  </body>
+</html>
